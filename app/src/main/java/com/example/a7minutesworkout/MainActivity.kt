@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.a7minutesworkout.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(){
     private var binding: ActivityMainBinding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +20,11 @@ class MainActivity : AppCompatActivity() {
 
         binding?.flBMI?.setOnClickListener {
             val intent = Intent(this,BMIActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding?.flHistory?.setOnClickListener {
+            val intent = Intent(this,HistoryActivity::class.java)
             startActivity(intent)
         }
     }
